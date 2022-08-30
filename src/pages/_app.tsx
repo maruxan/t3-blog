@@ -6,9 +6,7 @@ import { httpBatchLink } from '@trpc/client/links/httpBatchLink';
 import superjson from 'superjson';
 import { AppRouter } from 'server/route/app.router';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
 
 export default withTRPC<AppRouter>({
   ssr: false,
